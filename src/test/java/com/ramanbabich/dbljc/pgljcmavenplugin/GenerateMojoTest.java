@@ -198,11 +198,11 @@ class GenerateMojoTest {
     plugin.setGroupId("org.liquibase");
     plugin.setArtifactId("liquibase-maven-plugin");
     plugin.setVersion(liquibaseMavenPluginVersion);
-    plugin.setDependencies(List.of(postgresDependency(postgresJdbcDriverVersion)));
+    plugin.setDependencies(List.of(postgresJdbcDriverDependency(postgresJdbcDriverVersion)));
     return plugin;
   }
 
-  private static Dependency postgresDependency(String version) {
+  private static Dependency postgresJdbcDriverDependency(String version) {
     Dependency dependency = new Dependency();
     dependency.setGroupId("org.postgresql");
     dependency.setArtifactId("postgresql");
@@ -216,7 +216,7 @@ class GenerateMojoTest {
     plugin.setGroupId("org.jooq");
     plugin.setArtifactId("jooq-codegen-maven");
     plugin.setVersion(jooqCodegenMavenPluginVersion);
-    plugin.setDependencies(List.of(postgresDependency(postgresJdbcDriverVersion)));
+    plugin.setDependencies(List.of(postgresJdbcDriverDependency(postgresJdbcDriverVersion)));
     return plugin;
   }
 
