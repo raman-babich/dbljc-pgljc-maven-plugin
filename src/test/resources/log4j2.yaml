@@ -1,0 +1,12 @@
+configuration:
+  appenders:
+    console:
+      name: 'console'
+      target: 'SYSTEM_OUT'
+      patternlayout:
+        pattern: '%d{ISO8601_OFFSET_DATE_TIME_HHCMM} [%t] %5p %c{40} - %m%n%xEx{full}'
+  loggers:
+    root:
+      level: 'debug'
+      appenderref:
+        ref: 'console'
