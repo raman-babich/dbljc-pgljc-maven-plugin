@@ -11,8 +11,8 @@
     <liquibase.version>4.22.0</liquibase.version>
     <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
     <pgljc-maven-plugin.version>0.1.0-SNAPSHOT</pgljc-maven-plugin.version>
-    <postgresql.docker-image>postgres:15.3-alpine</postgresql.docker-image>
-    <postgresql.version>42.6.0</postgresql.version>
+    <postgres.docker-image>postgres:15.3-alpine</postgres.docker-image>
+    <postgres.version>42.6.0</postgres.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sortpom-maven-plugin.version>3.2.1</sortpom-maven-plugin.version>
   </properties>
@@ -53,8 +53,8 @@
         <artifactId>pgljc-maven-plugin</artifactId>
         <version>${pgljc-maven-plugin.version}</version>
         <configuration>
-          <postgresDockerImageName>${postgresql.docker-image}</postgresDockerImageName>
-          <postgresJdbcDriverVersion>${postgresql.version}</postgresJdbcDriverVersion>
+          <postgresDockerImageName>${postgres.docker-image}</postgresDockerImageName>
+          <postgresJdbcDriverVersion>${postgres.version}</postgresJdbcDriverVersion>
           <liquibaseMavenPluginVersion>${liquibase.version}</liquibaseMavenPluginVersion>
           <jooqCodegenMavenPluginVersion>${jooq.version}</jooqCodegenMavenPluginVersion>
           <liquibaseConfiguration>

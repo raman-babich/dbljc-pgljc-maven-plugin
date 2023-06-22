@@ -67,8 +67,8 @@ class GenerateMojoTest {
     Mockito.doReturn(plugin).when(mavenProject).getPlugin(THIS_PLUGIN_KEY);
     Xpp3Dom configuration = Xpp3DomBuilder.build(new ByteArrayInputStream("""
             <configuration>
-              <postgresDockerImageName>${postgresql.docker-image}</postgresDockerImageName>
-              <postgresJdbcDriverVersion>${postgresql.version}</postgresJdbcDriverVersion>
+              <postgresDockerImageName>${postgres.docker-image}</postgresDockerImageName>
+              <postgresJdbcDriverVersion>${postgres.version}</postgresJdbcDriverVersion>
               <liquibaseMavenPluginVersion>${liquibase.version}</liquibaseMavenPluginVersion>
               <jooqCodegenMavenPluginVersion>${jooq.version}</jooqCodegenMavenPluginVersion>
               <liquibaseConfiguration>
@@ -198,11 +198,11 @@ class GenerateMojoTest {
     plugin.setGroupId("org.liquibase");
     plugin.setArtifactId("liquibase-maven-plugin");
     plugin.setVersion(liquibaseMavenPluginVersion);
-    plugin.setDependencies(List.of(postgresqlDependency(postgresJdbcDriverVersion)));
+    plugin.setDependencies(List.of(postgresDependency(postgresJdbcDriverVersion)));
     return plugin;
   }
 
-  private static Dependency postgresqlDependency(String version) {
+  private static Dependency postgresDependency(String version) {
     Dependency dependency = new Dependency();
     dependency.setGroupId("org.postgresql");
     dependency.setArtifactId("postgresql");
@@ -216,7 +216,7 @@ class GenerateMojoTest {
     plugin.setGroupId("org.jooq");
     plugin.setArtifactId("jooq-codegen-maven");
     plugin.setVersion(jooqCodegenMavenPluginVersion);
-    plugin.setDependencies(List.of(postgresqlDependency(postgresJdbcDriverVersion)));
+    plugin.setDependencies(List.of(postgresDependency(postgresJdbcDriverVersion)));
     return plugin;
   }
 
