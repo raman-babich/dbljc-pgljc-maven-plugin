@@ -83,7 +83,6 @@ public class GenerateMojo extends AbstractMojo {
         configuration.getChild(JOOQ_CONFIGURATION_ROOT_ELEMENT_NAME),
         DEFAULT_ROOT_ELEMENT_NAME);
 
-
     try (PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>(postgresDockerImageName)) {
       postgres.start();
       MojoExecutor.executeMojo(
