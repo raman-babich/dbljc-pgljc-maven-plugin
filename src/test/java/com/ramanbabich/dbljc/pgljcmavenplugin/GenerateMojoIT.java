@@ -40,16 +40,15 @@ class GenerateMojoIT {
 
     verifier.verifyFilePresent(
         "target/classes/com/ramanbabich/dbljc/pgljcmavenpluginit/jooq/tables/Data.class");
-
-    //verifier = buildVerifier(testPomDir);
-    //verifier.addCliArguments("clean");
-    //verifier.execute();
   }
 
   private Verifier buildVerifier(String pomDir) {
     try {
       String userDir = System.getProperty("user.dir");
       Verifier verifier = new Verifier(userDir + pomDir);
+      verifier.setLocalRepo(System.getProperty("verifier.local-repo"));
+      String pluginVersion = System.getProperty("pgljc-maven-plugin.version");
+      verifier.addCliArgument("-Dpgljc-maven-plugin.version=" + pluginVersion);
       String logFileName = "target/log.txt";
       Path logFilePath = Paths.get(verifier.getBasedir(), logFileName);
       Files.createDirectories(logFilePath.getParent());

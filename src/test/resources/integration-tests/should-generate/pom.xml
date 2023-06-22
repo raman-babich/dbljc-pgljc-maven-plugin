@@ -27,7 +27,7 @@
     <jooq.version>3.18.4</jooq.version>
     <liquibase.version>4.22.0</liquibase.version>
     <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
-    <pgljc-maven-plugin.version>0.1.0-SNAPSHOT</pgljc-maven-plugin.version>
+    <pgljc-maven-plugin.version>will-be-overrode</pgljc-maven-plugin.version>
     <postgres.docker-image>postgres:15.3-alpine</postgres.docker-image>
     <postgres.version>42.6.0</postgres.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
