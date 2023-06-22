@@ -265,7 +265,6 @@ limitations under the License.]]></inlineHeader>
         <artifactId>maven-plugin-plugin</artifactId>
         <version>${maven-plugin-plugin.version}</version>
         <configuration>
-          <goalPrefix>pgljc</goalPrefix>
           <helpPackageName>${project.groupId}.pgljcmavenplugin</helpPackageName>
         </configuration>
         <executions>
