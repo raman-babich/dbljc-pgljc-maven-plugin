@@ -8,6 +8,8 @@ https://github.com/testcontainers/testcontainers-jooq-codegen-maven-plugin[proje
 could help you to do similar thing, and it will be fair to mention it, so you can choose plugin
 that fits you the best.
 
+You can find some other related plugins within https://github.com/raman-babich/dbljc[dbljc project].
+
 == Quick start
 
 Simply add `+pgljc maven plugin+` to your pom and specify `+generate+` goal in the executions section.
