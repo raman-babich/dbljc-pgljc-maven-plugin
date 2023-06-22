@@ -193,8 +193,6 @@ limitations under the License.]]></inlineHeader>
                 <exclude>NOTICE.txt</exclude>
                 <exclude>LICENSE.txt</exclude>
                 <exclude>checkstyle.xml</exclude>
-                <exclude>src/test/resources/**</exclude>
-                <exclude>src/main/resources/**</exclude>
                 <exclude>target/**</exclude>
               </excludes>
             </licenseSet>
