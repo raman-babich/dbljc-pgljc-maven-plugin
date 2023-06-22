@@ -1,7 +1,7 @@
 = Postgres liquibase jooq codegen maven plugin (pgljc) [COMING SOON]
 
 This maven plugin is a composition of liquibase maven plugin `+update+` goal and jooq codegen maven
-plugin `+generate+` goal with dockerized postgres running in context of these two goals.
+plugin `+generate+` goal with containerized postgres running in context of these two goals.
 
 It was created many years ago but open sourced only in 2023. And now there is another
 https://github.com/testcontainers/testcontainers-jooq-codegen-maven-plugin[project] that
