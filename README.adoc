@@ -67,7 +67,7 @@ dynamic and heavily depend on the versions provided in `+liquibaseMavenPluginVer
 The pgljc maven plugin internally uses
 https://github.com/liquibase/liquibase/tree/master/liquibase-maven-plugin[liquibase-maven-plugin],
 https://github.com/jOOQ/jOOQ/tree/main/jOOQ-codegen-maven[jooq-codegen-maven-plugin],
-https://github.com/testcontainers[testcontainers] and
+https://github.com/testcontainers/testcontainers-java[testcontainers] and
 https://github.com/mojo-executor/mojo-executor[mojo-executor].
 And the tiny thing this plugin do could be described with a few lines of code.
 
