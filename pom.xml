@@ -196,6 +196,7 @@ limitations under the License.]]></inlineHeader>
                 <exclude>LICENSE.txt</exclude>
                 <exclude>checkstyle.xml</exclude>
                 <exclude>target/**</exclude>
+                <exclude>**/log.txt</exclude>
               </excludes>
             </licenseSet>
           </licenseSets>
@@ -245,6 +246,7 @@ limitations under the License.]]></inlineHeader>
               <directory>src/test/resources/integration-tests</directory>
               <includes>
                 <include>**/target/**</include>
+                <include>**/log.txt</include>
               </includes>
             </fileset>
           </filesets>

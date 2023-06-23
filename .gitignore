@@ -15,5 +15,6 @@ tmp/
 local.properties
 .settings/
 .loadpath
+log.txt
 
 .mvn/wrapper/maven-wrapper.jar

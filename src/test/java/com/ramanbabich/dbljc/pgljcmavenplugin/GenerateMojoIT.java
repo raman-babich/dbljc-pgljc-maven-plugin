@@ -16,12 +16,6 @@
 
 package com.ramanbabich.dbljc.pgljcmavenplugin;
 
-import java.io.IOException;
-import java.nio.file.FileAlreadyExistsException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import org.apache.maven.shared.verifier.VerificationException;
 import org.apache.maven.shared.verifier.Verifier;
 import org.junit.jupiter.api.Test;
 
@@ -34,7 +28,7 @@ class GenerateMojoIT {
   void shouldGenerate() throws Exception {
     String testPomDir = "/src/test/resources/integration-tests/should-generate";
     Verifier verifier = buildVerifier(testPomDir);
-    verifier.addCliArguments("clean", "compile");
+    verifier.addCliArguments("compile");
 
     verifier.execute();
 
@@ -42,26 +36,16 @@ class GenerateMojoIT {
         "target/classes/com/ramanbabich/dbljc/pgljcmavenpluginit/jooq/tables/Data.class");
   }
 
-  private Verifier buildVerifier(String pomDir) {
-    try {
-      String userDir = System.getProperty("user.dir");
-      Verifier verifier = new Verifier(userDir + pomDir);
-      verifier.setLocalRepo(System.getProperty("verifier.local-repo"));
-      String pluginVersion = System.getProperty("pgljc-maven-plugin.version");
-      verifier.addCliArgument("-Dpgljc-maven-plugin.version=" + pluginVersion);
-      String logFileName = "target/log.txt";
-      Path logFilePath = Paths.get(verifier.getBasedir(), logFileName);
-      Files.createDirectories(logFilePath.getParent());
-      try {
-        Files.createFile(logFilePath);
-      } catch (FileAlreadyExistsException ex) {
-        // ignore
-      }
-      verifier.setLogFileName(logFileName);
-      return verifier;
-    } catch (VerificationException | IOException ex) {
-      throw new RuntimeException(ex);
+  private Verifier buildVerifier(String pomDir) throws Exception {
+    String userDir = System.getProperty("user.dir");
+    Verifier verifier = new Verifier(userDir + pomDir);
+    String localRepo = System.getProperty("verifier.local-repo");
+    if (localRepo != null) {
+      verifier.setLocalRepo(localRepo);
     }
+    String pluginVersion = System.getProperty("pgljc-maven-plugin.version");
+    verifier.addCliArgument("-Dpgljc-maven-plugin.version=" + pluginVersion);
+    return verifier;
   }
 
 }
