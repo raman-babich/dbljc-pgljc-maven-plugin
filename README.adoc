@@ -89,7 +89,7 @@ try (PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>(postgresDockerI
 ----
 
 NOTE: If you are curious enough, this plugin implementation contains only one java file,
-so don't be scary to look through it.
+so don't be scared to look through it.
 
 == License
 
