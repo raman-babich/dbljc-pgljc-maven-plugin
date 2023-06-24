@@ -1,4 +1,4 @@
-= Postgres liquibase jooq codegen maven plugin (pgljc) [COMING SOON]
+= Postgres liquibase jooq codegen maven plugin (pgljc)
 
 This maven plugin is a composition of liquibase maven plugin `+update+` goal and jooq codegen maven
 plugin `+generate+` goal with containerized postgres running in context of these two goals.
