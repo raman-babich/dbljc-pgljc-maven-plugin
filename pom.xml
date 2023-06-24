@@ -20,7 +20,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.ramanbabich.dbljc</groupId>
   <artifactId>pgljc-maven-plugin</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.1.0</version>
   <packaging>maven-plugin</packaging>
   <name>${project.groupId}:${project.artifactId}</name>
   <description>Postgres liquibase jooq codegen maven plugin (pgljc)</description>
@@ -371,7 +371,7 @@ limitations under the License.]]></inlineHeader>
     <connection>scm:git:git@github.com:raman-babich/dbljc-pgljc-maven-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:raman-babich/dbljc-pgljc-maven-plugin.git</developerConnection>
     <url>https://github.com/raman-babich/dbljc-pgljc-maven-plugin</url>
-    <tag>HEAD</tag>
+    <tag>v0.1.0</tag>
   </scm>
   <distributionManagement>
     <snapshotRepository>
